@@ -2,7 +2,6 @@
 
 import random
 
-#testing commit
 def drawBoard(board):
     # This function prints out the board that it was passed.
 
@@ -186,4 +185,3 @@ while True:
 
     if not playAgain():
         break
-
