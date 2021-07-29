@@ -35,9 +35,9 @@ def inputPlayer1Letter():
 def whoGoesFirst():
     # Randomly choose the player who goes first.
     if random.randint(0, 1) == 0:
-        return 'Player 1'
+        return 'player1'
     else:
-        return 'Player 2'
+        return 'player2'
 
 def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
@@ -96,7 +96,7 @@ def chooseRandomMoveFromList(board, movesList):
 def getPlayer2Move(board):
     # Let player 2 type in their move.
     move = ' '
-    while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
+    while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board,int(move)):
         print('What is player 2\'s next move? (1-9)')
         move = input()
         return int(move)
