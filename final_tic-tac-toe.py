@@ -50,7 +50,7 @@ class Game(Board):
         # Let player 1 type in their move.
         move = ' '
         while move not in '1 2 3 4 5 6 7 8 9'.split() or not gameBoard.isSpaceFree(int(move)):
-            print('What is player 1\'s next move? (1-9)')
+            print('What is player 1\'s next move? (1-9; bottom left-top right)')
             move = input()
         return int(move)
 
@@ -58,7 +58,7 @@ class Game(Board):
         # Let player 2 type in their move.
         move = ' '
         while move not in '1 2 3 4 5 6 7 8 9'.split() or not gameBoard.isSpaceFree(int(move)):
-            print('What is player 2\'s next move? (1-9)')
+            print('What is player 2\'s next move? (1-9; bottom left-top right)')
             move = input()
         return int(move)
 
@@ -84,7 +84,7 @@ class Game(Board):
 
     def playAgain(self):
         # This function returns True if the player wants to play again, otherwise it returns False.
-        print('Do you want to play again? (yes or no)')
+        print('Do you want to play again? (y/n)')
         return input().lower().startswith('y')
 
     def startGame(self):
